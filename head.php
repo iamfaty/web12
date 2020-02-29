@@ -32,4 +32,10 @@ require_once _WEB_PATH.'/smarty.php';
 #引入設定檔
 require_once _WEB_PATH . '/function.php';
 
-$_SESSION['admin'] = isset($_SESSION['admin'])?$_SESSION['admin']:false; 
+$_SSIOESN['admin'] = isset($_SESSION['admin'])?$_SESSION['admin']:false; 
+if (!$_SESSION['admin']){
+    $_cookie['token'] = isset($_cookie['token'])?$_cookie['token']:""; 
+    $_cookie['name'] = isset($_cookie['name'])?$_cookie['name']:""; 
+    if($_cookie['name']=="admin" and $_cookie['token']=="xxxxxx"){
+      $_SSIOESN['admin']=true;
+  }

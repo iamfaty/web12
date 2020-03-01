@@ -28,7 +28,7 @@ $WEB['file_name'] = basename($_SERVER['PHP_SELF']); //index.php
 #引入樣板引擎
 require_once _WEB_PATH.'/smarty.php';
 #引入資料庫設定
-// require_once _WEB_PATH.'/sqlConfig.php';
+require_once _WEB_PATH.'/sqlConfig.php';
 #引入設定檔
 require_once _WEB_PATH . '/function.php';
 
@@ -39,3 +39,5 @@ if (!$_SESSION['admin']){
     if($_cookie['name']=="admin" and $_cookie['token']=="xxxxxx"){
       $_SSIOESN['admin']=true;
   }
+}
+

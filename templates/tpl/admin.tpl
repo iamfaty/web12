@@ -13,6 +13,8 @@
 					<a href="index.php">
 						<li class="list-group-item">首頁</li>
 					</a>
+					<li class="list-group-item">
+						<a href="index.php?op=logout" class="btn-block">登出</a>
 					
 				</ul>
 				</div>
